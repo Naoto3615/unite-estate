@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNITE ESTATE | Plans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="extra-page">
+    <div class="bg-layer"></div>
+    <header class="site-header container">
+      <a class="brand" href="index.html">UNITE ESTATE</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="subhero reveal">
+        <span class="eyebrow">PLANS</span>
+        <h1>ライフスタイル別サポートプラン</h1>
+        <p>短期入居から長期居住まで、サポート範囲を選べるプラン構成です。</p>
+      </section>
+
+      <section class="section reveal" data-pricing>
+        <div class="pricing-head">
+          <h2>プラン一覧</h2>
+          <div class="pricing-mode">
+            <button class="mode-btn active" type="button" data-mode="monthly">Monthly</button>
+            <button class="mode-btn" type="button" data-mode="yearly">Yearly</button>
+          </div>
+        </div>
+
+        <div class="pricing-cards">
+          <article class="price-card">
+            <h3>Standard Support</h3>
+            <p>候補提案とオンライン内見をセットで提供。</p>
+            <strong>¥<span data-price data-monthly="15000" data-yearly="165000">15000</span></strong>
+          </article>
+          <article class="price-card">
+            <h3>Concierge Support</h3>
+            <p>内見同行・交渉支援・契約サポートを強化。</p>
+            <strong>¥<span data-price data-monthly="28000" data-yearly="310000">28000</span></strong>
+          </article>
+          <article class="price-card">
+            <h3>Relocation Support</h3>
+            <p>法人契約や複数拠点移動に対応。</p>
+            <strong>¥<span data-price data-monthly="42000" data-yearly="470000">42000</span></strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-head">
+          <span class="eyebrow">ESTIMATE</span>
+          <h2>簡易見積もり</h2>
+        </div>
+        <div class="calc-box">
+          <form class="calc-form">
+            <label>
+              プラン単価(円)
+              <select name="unit_price">
+                <option value="15000">Standard Support</option>
+                <option value="28000">Concierge Support</option>
+                <option value="42000">Relocation Support</option>
+              </select>
+            </label>
+            <label>
+              数量
+              <input type="number" name="quantity" min="1" value="1" />
+            </label>
+            <label>
+              期間(月)
+              <input type="number" name="months" min="1" value="3" />
+            </label>
+            <button type="submit" class="btn primary">見積もる</button>
+          </form>
+          <p class="calc-result" aria-live="polite">見積もり結果: -</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">© <span id="year"></span> UNITE ESTATE</footer>
+    <div class="toast" id="toast">更新内容を反映しました。</div>
+    <script src="app.js"></script>
+  </body>
+</html>

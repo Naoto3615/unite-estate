@@ -295,3 +295,182 @@ footer {
   .review-grid,
   .contact-panel { grid-template-columns: 1fr; }
 }
+
+/* EXTRA PAGES */
+.extra-page .site-header {
+  margin-bottom: 0.2rem;
+}
+
+.subhero {
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel, var(--paper, rgba(255, 255, 255, 0.08)));
+}
+
+.subhero h1 {
+  margin: 0.35rem 0 0.6rem;
+  font-size: clamp(1.8rem, 5vw, 3.1rem);
+}
+
+.subhero p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+.pricing-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.65rem;
+}
+
+.pricing-mode {
+  display: inline-flex;
+  gap: 0.45rem;
+  padding: 0.25rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.mode-btn {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.4rem 0.72rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.mode-btn.active {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.price-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: var(--panel, var(--paper, rgba(255, 255, 255, 0.08)));
+}
+
+.price-card h3 {
+  margin: 0 0 0.4rem;
+}
+
+.price-card p {
+  margin: 0;
+  color: var(--muted);
+  min-height: 2.8em;
+}
+
+.price-card strong {
+  display: inline-block;
+  margin-top: 0.65rem;
+  font-size: 1.35rem;
+}
+
+.calc-box {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: var(--panel, var(--paper, rgba(255, 255, 255, 0.08)));
+}
+
+.calc-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+  align-items: end;
+}
+
+.calc-form label {
+  display: grid;
+  gap: 0.32rem;
+  font-size: 0.9rem;
+}
+
+.calc-form select,
+.calc-form input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.58rem 0.66rem;
+  background: rgba(255, 255, 255, 0.75);
+  color: inherit;
+  font: inherit;
+}
+
+.calc-result {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  opacity: 0.75;
+}
+
+.calc-result.show {
+  opacity: 1;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--panel, var(--paper, rgba(255, 255, 255, 0.08)));
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.8rem 0.9rem;
+  cursor: pointer;
+}
+
+.faq-item.open .faq-question {
+  border-bottom-color: var(--line);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0.72rem 0.9rem;
+  color: var(--muted);
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .pricing-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-form {
+    grid-template-columns: 1fr;
+  }
+}
