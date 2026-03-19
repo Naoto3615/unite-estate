@@ -10,57 +10,84 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
+    <div class="bg-layer"></div>
+    <header class="site-header container">
       <a class="brand" href="#top">UNITE ESTATE</a>
-      <nav>
-        <a href="#property">物件情報</a>
-        <a href="#service">サービス</a>
-        <a href="#contact">問い合わせ</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
+      <nav class="nav-links">
+        <a href="#properties">Properties</a>
+        <a href="#support">Support</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <p class="caption">CITY RESIDENCE 2026</p>
-        <h1>都心で、静かに暮らす選択。</h1>
-        <p>駅徒歩5分圏・ワークスペース付・セキュリティ完備。暮らしと仕事を両立する住まいをご提案します。</p>
+    <main id="top" class="container">
+      <section class="hero reveal">
+        <span class="badge">CITY RESIDENCE 2026</span>
+        <div class="hero-grid">
+          <div>
+            <h1>都心で、静かに暮らす選択。</h1>
+            <p class="lead">駅近、在宅ワーク対応、セキュリティ完備。ライフスタイルと予算に合わせた住まい探しを伴走します。</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#contact">内見を予約</a>
+              <a class="btn ghost" href="#properties">物件を見る</a>
+            </div>
+          </div>
+          <aside class="hero-stats">
+            <article><strong data-count="480" data-suffix="件">0件</strong><span>非公開物件データ</span></article>
+            <article><strong data-count="96" data-suffix="%">0%</strong><span>オンライン内見満足度</span></article>
+            <article><strong data-count="1" data-suffix="日">0日</strong><span>最短契約手続き</span></article>
+          </aside>
+        </div>
       </section>
 
-      <section class="property" id="property">
-        <article>
-          <h2>1LDK / 45m²</h2>
-          <p>渋谷区・築3年・南向き</p>
-          <strong>¥198,000 / 月</strong>
-        </article>
-        <article>
-          <h2>2LDK / 62m²</h2>
-          <p>目黒区・築5年・角部屋</p>
-          <strong>¥265,000 / 月</strong>
-        </article>
-        <article>
-          <h2>Studio / 34m²</h2>
-          <p>港区・築2年・高層階</p>
-          <strong>¥179,000 / 月</strong>
-        </article>
+      <section class="section reveal" id="properties">
+        <div class="section-head"><span class="eyebrow">FEATURED PROPERTIES</span><h2>注目物件</h2></div>
+        <div class="card-grid three">
+          <article class="card"><h3>1LDK / 45m²</h3><p>渋谷区・築3年・南向き。</p><strong>¥198,000 / 月</strong></article>
+          <article class="card"><h3>2LDK / 62m²</h3><p>目黒区・築5年・角部屋。</p><strong>¥265,000 / 月</strong></article>
+          <article class="card"><h3>Studio / 34m²</h3><p>港区・築2年・高層階。</p><strong>¥179,000 / 月</strong></article>
+        </div>
       </section>
 
-      <section class="service" id="service">
-        <h2>提供サービス</h2>
-        <ul>
-          <li>オンライン内見（平日22時まで）</li>
-          <li>契約書電子化対応</li>
-          <li>入居後1年間のサポート窓口</li>
-        </ul>
+      <section class="section reveal" id="support">
+        <div class="section-head"><span class="eyebrow">SUPPORT FLOW</span><h2>サポート内容</h2></div>
+        <div class="process-list">
+          <article><h3>条件整理</h3><p>希望エリア・通勤時間・予算を整理し候補を絞り込み。</p></article>
+          <article><h3>内見最適化</h3><p>1日で比較できるよう、動線を組んで内見を提案。</p></article>
+          <article><h3>契約支援</h3><p>電子契約と初期費用の見える化で不安を削減。</p></article>
+        </div>
       </section>
 
-      <section class="contact" id="contact">
-        <h2>内見予約</h2>
-        <p>希望エリアとご予算をお送りください。担当者より1営業日以内にご連絡します。</p>
-        <a href="mailto:info@unite-estate.jp">info@unite-estate.jp</a>
+      <section class="section reveal" id="reviews">
+        <div class="section-head"><span class="eyebrow">REVIEWS</span><h2>利用者の声</h2></div>
+        <div class="review-grid">
+          <blockquote>「オンライン内見で比較しやすく、短期間で決められました。」</blockquote>
+          <blockquote>「条件整理が丁寧で、納得感のある物件選びができました。」</blockquote>
+          <blockquote>「契約周りの説明が明確で、初めてでも安心でした。」</blockquote>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contact">
+        <div class="contact-panel">
+          <div>
+            <span class="eyebrow">CONTACT</span>
+            <h2>内見・相談予約</h2>
+            <p>希望エリアと予算、入居希望時期を送信ください。担当者が最適な候補を提案します。</p>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="お名前" required />
+            <input type="email" placeholder="メールアドレス" required />
+            <textarea placeholder="希望条件"></textarea>
+            <button type="submit" class="btn primary">送信する</button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer>© <span id="year"></span> UNITE ESTATE</footer>
+    <footer class="container">© <span id="year"></span> UNITE ESTATE</footer>
+    <div class="toast" id="toast">お問い合わせありがとうございます。担当よりご連絡します。</div>
     <script src="app.js"></script>
   </body>
 </html>
